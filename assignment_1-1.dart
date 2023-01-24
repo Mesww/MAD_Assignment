@@ -5,13 +5,17 @@ void main() {
     {'name': 'orange', 'price': 6},
   ];
 
-  String search = 'banana';
-  int? price = 0;
-
+  String search = 'x';
+  int price = 0;
+  bool check = false;
   for (int i = 0; i < products.length; i++) {
     if (search == products[i]['name']) {
-      price = products[i]['price'] as int?;
+      //https://dart.dev/guides/language/language-tour#type-test-operators
+      price = products[i]['price'] as int; //as : Typecast
+      check = true;
     }
   }
-  print(search + ' is $price bath');
+  check
+      ? print(search + ' is $price bath')
+      : print("Error!!! : '$search' don't belong to product");
 }
