@@ -30,9 +30,9 @@ void main() {
 }
 
 void square(int size) {
-  stdout.write("Area if square = ${pow(size, size)}");
+  stdout.write("Area if square = ${pow(size, 2)}");
 }
 
 void circle(var r) {
-  stdout.write("Area if square = ${pow(r, r) * pi}");
+  stdout.write("Area if circle = ${pow(r, 2) * pi}");
 }
