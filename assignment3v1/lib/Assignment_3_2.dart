@@ -41,6 +41,9 @@ class _calculatorState extends State<calculator> {
               children: [
                 Container(
                   child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStatePropertyAll(Colors.orange)),
                     onPressed: () {
                       setState(() {
                         num1 = int.tryParse(n1.text)!;
@@ -56,6 +59,8 @@ class _calculatorState extends State<calculator> {
                 const Spacer(),
                 Container(
                   child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Colors.blue)),
                     onPressed: () {
                       setState(() {
                         num1 = int.tryParse(n1.text)!;
@@ -71,6 +76,8 @@ class _calculatorState extends State<calculator> {
                 const Spacer(),
                 Container(
                   child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Colors.red)),
                     onPressed: () {
                       setState(() {
                         result = '';
