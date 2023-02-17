@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:assignment_5/login.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -27,7 +28,10 @@ class _WelcomeState extends State<Welcome> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Login()),
+                  );
                 },
                 child: Text('Sign out'))
           ],

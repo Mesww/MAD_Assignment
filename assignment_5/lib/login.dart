@@ -66,15 +66,16 @@ class _LoginState extends State<Login> {
                     });
                   }
                   if (c == true) {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: ((context) => const Welcome()),
                             settings: RouteSettings(arguments: output)));
-                    name.clear();
-                    pass.clear();
                     output = '';
                   }
+
+                  name.clear();
+                  pass.clear();
                 },
                 child: Text('Login')),
             Text(
