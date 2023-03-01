@@ -24,8 +24,9 @@ class Q1 extends StatelessWidget {
               ),
               ElevatedButton(
                   onPressed: () {
-                    context.read<Check>().set_Answer(input_q1.text);
-                    context.read<Check>().check_();
+                    if (input_q1.text == DateTime.now()) {
+                      context.read<Check>().set_Score();
+                    }
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) => const Q2()));
                   },

@@ -26,8 +26,12 @@ class Q2 extends StatelessWidget {
               ),
               ElevatedButton(
                   onPressed: () {
-                    context.read<Check>().set_Answer(input_q2.text);
-                    context.read<Check>().check_();
+                    List<String> answer = ['yellow', 'Yellow'];
+                    for (var i = 0; i < answer.length; i++) {
+                      if (input_q2.text == answer[i]) {
+                        context.read<Check>().set_Score();
+                      }
+                    }
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
